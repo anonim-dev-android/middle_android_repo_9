@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew test
 
       - name: Generate timestamp
-        run: echo "FILE_TIME=$(date +'%H%M%S_%d%m%Y')" >> $GITHUB_ENV
+        run: echo "FILE_TIME=$(TZ='Europe/Moscow' date +%H%M%S_%d%m%Y')" >> $GITHUB_ENV
 
       - name: Save tests result report
         uses: actions/upload-artifact@v4
