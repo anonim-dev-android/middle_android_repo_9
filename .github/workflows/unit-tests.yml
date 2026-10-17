@@ -36,5 +36,5 @@ jobs:
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: tests-report-{{ env.FILE_TIME }}
+          name: tests-report-${{ env.FILE_TIME }}
           path: app/build/reports/tests/
