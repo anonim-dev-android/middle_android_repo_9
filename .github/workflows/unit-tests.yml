@@ -37,4 +37,4 @@ jobs:
         if: always()
         with:
           name: tests-report-{{ env.FILE_TIME }}
-          path: app/reports/
+          path: app/build/reports/tests/
